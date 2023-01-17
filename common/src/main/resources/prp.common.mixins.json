@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "org.localmc.tools.prp.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "client": [
+    "MixinBookContents"
+  ],
+  "mixins": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
