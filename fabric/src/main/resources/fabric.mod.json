@@ -27,7 +27,6 @@
   ],
   "depends": {
     "fabric": "*",
-    "minecraft": ">=1.16.5",
-    "patchouli": ">=1.16.4-54"
+    "minecraft": ">=1.16.5"
   }
 }
