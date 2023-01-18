@@ -1,6 +1,6 @@
 <center><div align="center">
 
-<img height="150" src="icon/icon-arch.png" width="150"/>
+<img height="150" src="icon/400x400.png" width="150"/>
 
 # PatchouliResourcePatch-Arch
 
