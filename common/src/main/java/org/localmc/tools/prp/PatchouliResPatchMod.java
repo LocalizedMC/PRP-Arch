@@ -11,7 +11,5 @@ public class PatchouliResPatchMod {
         if (PRPExpectPlatform.getModLoaded()){
             LOGGER.info("Patchouli is loaded!");
         }
-
-
     }
 }
