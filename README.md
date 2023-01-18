@@ -7,7 +7,7 @@
 ![Enviroment](https://img.shields.io/badge/Enviroment-Client-purple)
 
 
-Support Forge/Fabric/Quilt.
+A fork of PatchouliResourcePatch. Support Forge/Fabric/Quilt.
 
 </div></center>
 
