@@ -12,7 +12,7 @@ import vazkii.patchouli.client.book.BookContents;
 import java.io.IOException;
 import java.io.InputStream;
 
-@Mixin(BookContents.class)
+@Mixin(value = BookContents.class, remap = false)
 public class MixinBookContents {
     @Inject(at = @At("HEAD"), method = "loadJson", cancellable = true, remap = false)
     private void loadJson(Identifier resloc, Identifier fallback, CallbackInfoReturnable<InputStream> callback) {
