@@ -3,7 +3,8 @@
   "package": "org.localmc.tools.prp.mixin",
   "compatibilityLevel": "JAVA_8",
   "client": [
-    "MixinBookContents"
+    "MixinBookContentClasspathLoader",
+    "MixinBookRegistry"
   ],
   "mixins": [
   ],
