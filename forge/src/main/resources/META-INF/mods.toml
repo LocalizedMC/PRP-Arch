@@ -1,37 +1,30 @@
 modLoader = "javafml"
 loaderVersion = "[36,)"
 #issueTrackerURL = ""
-license = "Insert License Here"
+license = "CC-BY-NC-SA 3.0"
 
 [[mods]]
-modId = "examplemod"
+modId = "archprp"
 version = "${version}"
-displayName = "Example Mod"
+displayName = "PatchouliResourcePatch-Arch"
 authors = "Me!"
 description = '''
 A fork of PatchouliResourcePatch.  
 Make patchouli books can be override by resource packs. Not include book.json.Need to work with existing /data/ books. 
 Will try to load from assets first. Support localization.
 '''
-#logoFile = ""
+logoFile = "icon.png"
 
-[[dependencies.examplemod]]
+[[dependencies.archprp]]
 modId = "forge"
 mandatory = true
 versionRange = "[36,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.examplemod]]
+[[dependencies.archprp]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.16.5,)"
+versionRange = "[1.16.4,1.16.5]"
 ordering = "NONE"
-side = "BOTH"
-
-[[dependencies.examplemod]]
-modId = "architectury"
-mandatory = true
-versionRange = "[1.32.66,)"
-ordering = "AFTER"
 side = "BOTH"

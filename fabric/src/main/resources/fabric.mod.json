@@ -8,11 +8,11 @@
     "Me!"
   ],
   "contact": {
-    "homepage": "https://github.com//ArchPRP",
-    "sources": "https://github.com//ArchPRP"
+    "homepage": "https://github.com/LocalizedCNMC/PRP-Arch",
+    "sources": "https://github.com/LocalizedCNMC/PRP-Arch"
   },
-  "license": "MIT",
-  "icon": "assets/arch-prp/icon.png",
+  "license": "CC-BY-NC-SA 3.0",
+  "icon": "icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
