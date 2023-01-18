@@ -8,6 +8,10 @@ public class PatchouliResPatchMod {
     public static final Logger LOGGER = LogManager.getLogger("ArchPRP");
     
     public static void init() {
-        System.out.println(PRPExpectPlatform.getConfigDirectory().toAbsolutePath().normalize().toString());
+        if (PRPExpectPlatform.getModLoaded()){
+            LOGGER.info("Patchouli is loaded!");
+        }
+
+
     }
 }
