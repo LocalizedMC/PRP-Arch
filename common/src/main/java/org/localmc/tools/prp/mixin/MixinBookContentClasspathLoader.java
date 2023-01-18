@@ -3,6 +3,7 @@ package org.localmc.tools.prp.mixin;
 import com.google.common.base.Preconditions;
 import com.google.gson.JsonElement;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.resource.Resource;
 import net.minecraft.resource.ResourceManager;
 import net.minecraft.util.Identifier;
 import org.localmc.tools.prp.PatchouliResPatchMod;
@@ -17,11 +18,11 @@ import vazkii.patchouli.client.book.BookContentsBuilder;
 import vazkii.patchouli.common.book.Book;
 import vazkii.patchouli.common.book.BookRegistry;
 
-import javax.annotation.Nullable;
+import org.jetbrains.annotations.Nullable;
 import java.io.IOException;
 import java.io.UncheckedIOException;
-import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 
 
 @Mixin(value = BookContentClasspathLoader.class, remap = false)
@@ -30,9 +31,9 @@ public class MixinBookContentClasspathLoader {
     @Inject(at = @At("HEAD"), method = "findFiles")
     private void findFiles(Book book, String dir, List<Identifier> list, CallbackInfo ci) {
         String prefix = String.format("%s/%s/%s/%s", BookRegistry.BOOKS_LOCATION, book.id.getPath(), BookContentsBuilder.DEFAULT_LANG, dir);
-        Collection<Identifier> files = MinecraftClient.getInstance().getResourceManager().findResources(prefix, p -> p.endsWith(".json"));
+        Map<Identifier, Resource> files = MinecraftClient.getInstance().getResourceManager().findResources(prefix, p -> p.getNamespace().endsWith(".json"));
 
-        files.stream()
+        files.keySet().stream()
                 .distinct()
                 .filter(file -> file.getNamespace().equals(book.id.getNamespace()))
                 .map(file -> {
@@ -57,10 +58,10 @@ public class MixinBookContentClasspathLoader {
         PatchouliResPatchMod.LOGGER.debug("Loading {}", resloc);
         ResourceManager manager = MinecraftClient.getInstance().getResourceManager();
         try {
-            if (manager.containsResource(resloc)) {
-                callback.setReturnValue(BookContentLoader.streamToJson(manager.getResource(resloc).getInputStream()));
-            } else if (fallback != null && manager.containsResource(fallback)) {
-                callback.setReturnValue(BookContentLoader.streamToJson(manager.getResource(fallback).getInputStream()));
+            if (manager.getResource(resloc).isPresent()) {
+                callback.setReturnValue(BookContentLoader.streamToJson(manager.getResource(resloc).get().getInputStream()));
+            } else if (fallback != null && manager.getResource(fallback).isPresent()) {
+                callback.setReturnValue(BookContentLoader.streamToJson(manager.getResource(fallback).get().getInputStream()));
             }
         } catch (IOException ex) {
             throw new UncheckedIOException(ex);
