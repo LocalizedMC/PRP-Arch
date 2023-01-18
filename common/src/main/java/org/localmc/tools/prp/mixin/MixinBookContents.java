@@ -12,7 +12,6 @@ import vazkii.patchouli.client.book.BookContents;
 import java.io.IOException;
 import java.io.InputStream;
 
-
 @Mixin(BookContents.class)
 public class MixinBookContents {
     @Inject(at = @At("HEAD"), method = "loadJson", cancellable = true, remap = false)
