@@ -27,7 +27,6 @@ import java.util.Map;
 
 @Mixin(value = BookContentClasspathLoader.class, remap = false)
 public class MixinBookContentClasspathLoader {
-
     @Inject(at = @At("HEAD"), method = "findFiles")
     private void findFiles(Book book, String dir, List<Identifier> list, CallbackInfo ci) {
         String prefix = String.format("%s/%s/%s/%s", BookRegistry.BOOKS_LOCATION, book.id.getPath(), BookContentsBuilder.DEFAULT_LANG, dir);
