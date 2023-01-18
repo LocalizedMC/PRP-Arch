@@ -12,8 +12,6 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import vazkii.patchouli.client.book.BookContentClasspathLoader;
-import vazkii.patchouli.client.book.BookContentExternalLoader;
-import vazkii.patchouli.client.book.BookContentLoader;
 import vazkii.patchouli.client.book.BookContentsBuilder;
 import vazkii.patchouli.common.book.Book;
 import vazkii.patchouli.common.book.BookRegistry;
@@ -57,9 +55,9 @@ public class MixinBookContentClasspathLoader {
         ResourceManager manager = MinecraftClient.getInstance().getResourceManager();
         try {
             if (manager.containsResource(resloc)) {
-                callback.setReturnValue(MinecraftClient.getInstance().getResourceManager().getResource(resloc).getInputStream());
+                callback.setReturnValue(manager.getResource(resloc).getInputStream());
             } else if (fallback != null && manager.containsResource(fallback)) {
-                callback.setReturnValue(MinecraftClient.getInstance().getResourceManager().getResource(resloc).getInputStream());
+                callback.setReturnValue(manager.getResource(resloc).getInputStream());
             }
         } catch (IOException ex) {
             throw new UncheckedIOException(ex);
