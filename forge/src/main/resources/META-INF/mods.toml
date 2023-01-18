@@ -9,7 +9,9 @@ version = "${version}"
 displayName = "Example Mod"
 authors = "Me!"
 description = '''
-This is an example description! Tell everyone what your mod is about!
+A fork of PatchouliResourcePatch.  
+Make patchouli books can be override by resource packs. Not include book.json.Need to work with existing /data/ books. 
+Will try to load from assets first. Support localization.
 '''
 #logoFile = ""
 

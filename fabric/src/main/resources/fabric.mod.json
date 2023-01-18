@@ -1,18 +1,18 @@
 {
   "schemaVersion": 1,
-  "id": "examplemod",
+  "id": "archprp",
   "version": "${version}",
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "PatchouliResourcePatch-Arch",
+  "description": "A fork of PatchouliResourcePatch.  Make patchouli books can be override by resource packs. Not include book.json.Need to work with existing /data/ books. Will try to load from assets first. Support localization.",
   "authors": [
     "Me!"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://github.com//ArchPRP",
+    "sources": "https://github.com//ArchPRP"
   },
-  "license": "Insert License Here",
-  "icon": "assets/examplemod/icon.png",
+  "license": "MIT",
+  "icon": "assets/arch-prp/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
@@ -20,12 +20,10 @@
     ]
   },
   "mixins": [
-    "examplemod.mixins.json",
-    "examplemod-common.mixins.json"
+    "archprp.common.mixins.json"
   ],
   "depends": {
     "fabric": "*",
-    "minecraft": ">=1.16.5",
-    "architectury": ">=1.32.66"
+    "minecraft": ">=1.16.5"
   }
 }
