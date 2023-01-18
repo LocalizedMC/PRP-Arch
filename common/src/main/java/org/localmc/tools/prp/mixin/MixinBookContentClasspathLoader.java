@@ -22,7 +22,7 @@ import java.io.UncheckedIOException;
 import java.util.Collection;
 import java.util.List;
 
-@Mixin(BookContentClasspathLoader.class)
+@Mixin(value = BookContentClasspathLoader.class, remap = false)
 public class MixinBookContentClasspathLoader {
     @Inject(at = @At("HEAD"), method = "findFiles")
     private void findFiles(Book book, String dir, List<Identifier> list, CallbackInfo ci) {
