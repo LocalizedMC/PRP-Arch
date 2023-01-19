@@ -24,7 +24,7 @@ import java.util.Collection;
 import java.util.List;
 
 @Mixin(value = BookContents.class, remap = false)
-public class MixinBookContentClasspathLoader {
+public class MixinBookContents {
     @Shadow
     @Final
     protected static String DEFAULT_LANG;
