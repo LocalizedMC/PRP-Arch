@@ -1,5 +1,5 @@
 modLoader = "javafml"
-loaderVersion = "[36,)"
+loaderVersion = "[29,)"
 #issueTrackerURL = ""
 license = "CC-BY-NC-SA 3.0"
 
@@ -19,13 +19,13 @@ logoFile = "icon.png"
 [[dependencies.archprp]]
 modId = "forge"
 mandatory = true
-versionRange = "[36,)"
+versionRange = "[29,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.archprp]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.15,)"
+versionRange = "[1.15,1.15.2]"
 ordering = "NONE"
 side = "BOTH"
