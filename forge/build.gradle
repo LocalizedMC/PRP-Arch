@@ -7,7 +7,7 @@ architectury {
     forge()
 }
 
-project.archivesBaseName = rootProject.archivesBaseName + "-Fabric"
+project.archivesBaseName = rootProject.archivesBaseName + "-Forge"
 
 loom {
     forge {
