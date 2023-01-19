@@ -7,6 +7,8 @@ architectury {
     forge()
 }
 
+project.archivesBaseName = rootProject.archivesBaseName + "-Forge"
+
 loom {
     forge {
         mixinConfig "archprp.common.mixins.json"
