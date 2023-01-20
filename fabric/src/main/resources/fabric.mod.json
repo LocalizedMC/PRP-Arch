@@ -14,7 +14,7 @@
     "homepage": "https://github.com/LocalizedCNMC/PRP-Arch",
     "sources": "https://github.com/LocalizedCNMC/PRP-Arch"
   },
-  "license": "CC-BY-NC-SA 3.0",
+  "license": "CC-BY-NC-SA 4.0",
   "icon": "icon.png",
   "environment": "*",
   "entrypoints": {
