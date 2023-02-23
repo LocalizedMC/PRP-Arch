@@ -7,6 +7,7 @@ license = "CC-BY-NC-SA 4.0"
 modId = "archprp"
 version = "${version}"
 displayName = "PatchouliResourcePatch-Arch"
+displayURL = "https://github.com/LocalizedMC/PRP-Arch"
 credits="kappa-maintainer"
 authors = "TexTrue, LocalizedCNMC"
 description = '''
