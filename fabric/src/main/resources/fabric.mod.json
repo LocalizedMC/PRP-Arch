@@ -4,9 +4,6 @@
   "version": "${version}",
   "name": "PatchouliResourcePatch-Arch",
   "description": "A fork of PatchouliResourcePatch.  Make patchouli books can be override by resource packs. Not include book.json.Need to work with existing /data/ books. Will try to load from assets first. Support localization.",
-  "credits": [
-    
-  ],
   "authors": [
     "kappa-maintainer","TexTrue, LocalizedMC"
   ],
