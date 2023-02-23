@@ -22,7 +22,7 @@ resource pack before loading from data.
 
 Useful only for non-English players or people who want to apply resource packs to Patchouli books.
 
-### This module mixin code reference/use:
+### This mod mixin code reference/use:
 - [kappa-maintainer/PRP](https://github.com/kappa-maintainer/PRP) (CC-BY-NC-SA 3.0)
 - [StarskyXIII/PRP-Fabric](https://github.com/StarskyXIII/PRP-Fabric) (CC-BY-NC-SA 3.0)
 - [CFPAOrg/I18nUpdateMod2](https://github.com/CFPAOrg/I18nUpdateMod2) (MIT) (Patchouli mixin code part)
