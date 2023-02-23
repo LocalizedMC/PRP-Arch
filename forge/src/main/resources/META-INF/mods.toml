@@ -7,8 +7,9 @@ license = "CC-BY-NC-SA 4.0"
 modId = "archprp"
 version = "${version}"
 displayName = "PatchouliResourcePatch-Arch"
+displayURL = "https://github.com/LocalizedMC/PRP-Arch"
 credits="kappa-maintainer"
-authors = "TexTrue, LocalizedCNMC"
+authors = "TexTrue, LocalizedMC"
 description = '''
 A fork of PatchouliResourcePatch.  
 Make patchouli books can be override by resource packs. Not include book.json.Need to work with existing /data/ books. 
