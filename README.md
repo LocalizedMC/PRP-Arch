@@ -14,13 +14,17 @@ Support Forge/Fabric/Quilt.
 
 </div></center>
 
-Since Patchouli changed in 1.14+ to store and load books in /data/, 
+Since Patchouli changed in 1.15.x ~ 1.19.x to store and load books in /data/, 
 external resource packs or data packs cannot overwrite the content of these books.
 
 This mod uses mixin to change Patchouli's loading behavior so that it tries to load from a 
 resource pack before loading from data.
 
 Useful only for non-English players or people who want to apply resource packs to Patchouli books.
+
+About Patchouli for 1.15.x ~ 1.19.x : Some mods (like Apothesis) still put their manuals in the traditional data folder, and Patchouli won't even try to load from resource packs in this case, so this patch is still needed.
+
+About Patchouli for 1.20.x and above : Patchouli now only support resource packs mode! This mod is no longer required.
 
 ### This mod mixin code reference/use:
 - [kappa-maintainer/PRP](https://github.com/kappa-maintainer/PRP) (CC-BY-NC-SA 3.0)
